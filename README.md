@@ -93,7 +93,7 @@ git checkout -b branch_name
 To add a remote repository, use the command:
 
 ```bash
-git add remote https://repo_here
+git remote add <name> <url>
 ```
 
 To push changes to a remote repo, use the command:
