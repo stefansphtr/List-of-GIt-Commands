@@ -142,7 +142,7 @@ To apply changes from another branch onto your current branch, use the command:
 git rebase branch_name
 ```
 
-## Pull with rebase
+## Pull + rebase
 
 To fetch a branch from remote + rebasing it
 
