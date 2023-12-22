@@ -102,6 +102,43 @@ To push changes to a remote repo, use the command:
 git push
 ```
 
+## Renaming a Git Branch
+
+This guide explains how to rename a local Git branch and update the remote repository to reflect the change.
+
+### Steps
+
+1. **Rename the local branch**
+
+   If you are currently on the branch you want to rename:
+
+   ```bash
+   git branch -m new-branch-name
+   ```
+   if you are on a different branch:
+
+   ```bash
+    git branch -m old-branch-name new-branch-name
+    ```
+    Replace `old-branch-name` with the current name of the branch, and `new-branch-name` with the name you want to give to the branch.
+
+2. **Push the branch to the remote repository**
+
+    ```bash
+    git push origin -u new-branch-name
+    ```
+    Replace `new-branch-name` with the name of the branch you set in the previous step.
+
+3. **Delete the old branch from remote repository**
+
+    ```bash
+    git push origin --delete old-branch-name
+    ```
+    Replace `old-branch-name` with the name of the branch you want to delete.
+
+    Please be careful when deleting branches from a remote repository, as you might lose comits if you delete the wrong branch.
+    
+
 ## Pull
 
 To pull all data from git, use the command:
