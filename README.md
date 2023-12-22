@@ -68,11 +68,28 @@ git rm filename
 
 ## Checkout
 
+This is a versatile command that can be used for both switching to a different branch and for checking out files from a different branch. This can sometimes lead to confusion, especially for beginners, because the command's behavior changes based on the context.
+
+
 To switch to a newly created branch, use the command:
 
 ```bash
 git checkout branch_name
 ```
+
+## Switch
+
+This is a newer command, introduced in Git 2.23.0, that is specifically designed for switching between branches. It separates the "switching branches" and "checking out files" functionalities of `git checkout` into two distinct commands (`git switch` and `git restore` respectively). This makes it more intuitive and less error-prone to use, especially for beginners.
+
+```bash
+git switch branch_name
+```
+
+Note:<br>
+
+If you're using a version of Git that's older than 2.23.0, `git switch` won't be available. In that case, you'll need to use `git checkout` to switch branches.
+
+`git checkout` and `git switch` are both Git commands used to switch between different branches in a Git repository. However, they have some differences in their usage and functionality.
 
 ## Branch
 
@@ -137,7 +154,7 @@ This guide explains how to rename a local Git branch and update the remote repos
     Replace `old-branch-name` with the name of the branch you want to delete.
 
     Please be careful when deleting branches from a remote repository, as you might lose comits if you delete the wrong branch.
-    
+
 
 ## Pull
 
