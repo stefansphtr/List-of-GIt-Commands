@@ -6,6 +6,40 @@
 
 This is a list of common and useful Git commands that you can use in your daily development work.
 
+## Setting Upstream in Git
+
+This guide explains how to set up an upstream branch in Git. Setting an upstream branch means to link a local branch to a remote branch. This is useful for tracking the relationship between the two, and Git can provide helpful information about the status of the branches.
+
+### Steps
+
+1. **Create a new branch**
+
+   Create a new branch in your local repository.
+
+   ```bash
+   git checkout -b new-branch
+   ```
+
+2. **Push the new branch to the remote repository**
+   
+   Push the new branch to the remote repository. The `-u` option sets the upstream branch for the new branch.
+
+   ```bash
+   git push -u origin new-branch
+   ```
+
+   The `-u` option stands for --set-upstream. Afters setting the upstream branch with this command, Git will know that `git push` and `git pull` for your local branch should go to that same branch on the remote repository.
+
+3. **Set the upstream branch for an existing branch**
+   
+   If you have an existing branch and you want to set its upstream branch with this command, Git will know that `git push` and `git pull` for your local branch should go to that same branch on the remote repository.
+
+   ```bash
+    git branch --set-upstream-to=origin/remote-branch
+    ```
+
+    Replace `remote-branch` with the name of the branch on the remote repository that you want to track.
+
 ## Configuration
 
 To check your Git configuration, which includes user name and email, use the command:
