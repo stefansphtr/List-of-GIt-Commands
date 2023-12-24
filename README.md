@@ -139,6 +139,25 @@ To create a branch and switch to it immediately, use the command:
 git checkout -b branch_name
 ```
 
+## Branch -vv
+
+If you want to check tracking branches for pull and push requests. This command will list all local branches along with their corresponding remote branches if they have one.
+
+Here is the command:
+
+```bash
+git branch -vv
+```
+
+The output will look something like this:
+
+```bash
+main  a3f66fd [origin/main] Add README file
+feature 687704c [origin/feature: ahead 1, behind 1] Add new feature
+```
+
+In this example, the `main` branch is tracking `origin/main`, and the `feature` branch is tracking `origin/feature`. The `ahead 1` and `behind 1` indicate that the `feature` branch is one commit ahead of and one commit behind its remote tracking branch.
+
 ## Remote
 
 To add a remote repository, use the command:
