@@ -153,6 +153,31 @@ To push changes to a remote repo, use the command:
 git push
 ```
 
+## Remote set-url
+
+If you've already added a remote repository with the wrong URL, you can change it using the `git remote set-url` command. Here's how:
+
+1. First, check the current remote repository for your project. You can do this with the `git remote -v` command. This will list all remote repositories and their URLs.
+
+    ```bash
+    git remote -v
+    ```
+
+2. If the URL for `origin` is incorrect, you can change it with the `git remote set-url` command. Replace `new_url` with the correct URL for your remote repository.
+
+    ```bash
+    git remote set-url origin new_url
+    ```
+
+3. Verify that the remote URL has been changed with the `git remote -v` command again.
+
+    ```bash
+    git remote -v
+    ```
+
+Now, the `origin` should point to the correct remote repository URL.
+
+
 ## Renaming a Git Branch
 
 This guide explains how to rename a local Git branch and update the remote repository to reflect the change.
