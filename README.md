@@ -281,3 +281,55 @@ To fetch a branch from remote + rebasing it
 ```sh
 git pull --rebase
 ```
+
+## Alias
+
+In Git, an alias is a shorter name or abbreviation for a command or a set of commands. It's a way to create custom commands or shorten existing ones to make them quicker and easier to type.
+Aliases are defined in the Git configuration file, which can be at the system, user, or repository level. The --global option sets the alias for all repositories for the current user.
+
+- Shorten the status command
+
+```bash
+git config --global alias.st status
+```
+
+- Shorten the checkout command
+
+```bash
+git config --global alias.co checkout
+```
+
+- Shorten the branch command
+
+```bash
+git config --global alias.br branch
+```
+
+- Shorten the commit command
+
+```bash
+git config --global alias.ci commit
+```
+
+- Shorten the diff command
+
+```bash
+git config --global alias.df diff
+```
+
+- Shorten the add command
+
+```bash
+git config --global alias.ad add
+```
+
+- Show logs in one line format
+
+```bash
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+- Show the status in short format
+
+```bash
+git config --global alias.s "status -s"
+```
