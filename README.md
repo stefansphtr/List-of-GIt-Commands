@@ -333,3 +333,11 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 ```bash
 git config --global alias.s "status -s"
 ```
+
+- Show the list of aliases
+
+```bash
+git config --global --get-regexp alias
+```
+This command will list all the aliases that are set in your global Git configuration file.
+Each alias will be displayed in the format `alias.<alias-name> <command>`, where `<alias-name>` is the name of the alias and `<command>` is the Git command that the alias stands for.
