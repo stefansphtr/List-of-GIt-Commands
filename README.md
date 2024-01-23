@@ -6,6 +6,8 @@
 
 This is a list of common and useful Git commands that you can use in your daily development work.
 
+> Note: I list an extra customizing git like alias, .gitignore, and .gitattributes
+
 ## Setting Upstream in Git
 
 This guide explains how to set up an upstream branch in Git. Setting an upstream branch means to link a local branch to a remote branch. This is useful for tracking the relationship between the two, and Git can provide helpful information about the status of the branches.
