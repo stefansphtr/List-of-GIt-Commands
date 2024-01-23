@@ -409,7 +409,7 @@ Best practices for writing a `.gitignore` file:
 5. **Use templates:**
    There are many `.gitignore` templates available online for different types of projects. You can use these templates as a starting point for your own `.gitignore` file. You can find a list of templates on the [GitHub gitignore repository](https://github.com/toptal/gitignore)
 
-   
+
 Example of a .gitignore file for a Python project:
 
 ```bash
@@ -542,4 +542,43 @@ dmypy.json
 # Pyre type checker
 .pyre/
 ```
+
+## .gitattributes
+
+The `.gitattributes` file is a plain text file that controls how Git treats files. Each line in the `.gitattributes` file is a pattern followed by an attribute specification. It's placed in the root directory of a Git repository and contains a list of file patterns followed by the attributes that should be applied to them.
+
+Here are a few use cases of .gitattributes:
+
+1. **Specify line ending style**: You can use `.gitattributes` to normalize line endings to a standard style. This is useful in a team where developers are using different operating systems that handle line endings differently (like Windows using CRLF and Unix using LF).
+
+    ```gitattributes
+    # Ensure all .txt and .md files use LF
+    *.txt text eol=lf
+    *.md text eol=lf
+    ```
+
+2. **Mark files as binary**: If you have binary files in your repository, you can use `.gitattributes` to tell Git to treat them as such. This can prevent Git from trying to merge them or show diffs for them.
+
+    ```gitattributes
+    # Treat .jpg and .png files as binary
+    *.jpg binary
+    *.png binary
+    ```
+
+3. **Specify diff driver**: For certain types of files, you might want to use a different tool to show diffs. You can specify this in the `.gitattributes` file.
+
+    ```gitattributes
+    # Use the "diff-python" tool for .py files
+    *.py diff=diff-python
+    ```
+
+4. **Export-ignore**: If you're creating an archive of your files (for example, with `git archive`), you can use the `export-ignore` attribute to exclude certain files from the archive.
+
+    ```gitattributes
+    # Ignore test files and documentation when creating an archive
+    /tests export-ignore
+    /docs export-ignore
+    ```
+
+Remember to commit the `.gitattributes` file into your repository so that these settings are shared with all collaborators.
 
