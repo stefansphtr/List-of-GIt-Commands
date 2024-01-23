@@ -392,6 +392,24 @@ Each alias will be displayed in the format `alias.<alias-name> <command>`, where
     - `.env`
     - `.config.json`
 
+Best practices for writing a `.gitignore` file:
+
+1. **Don't ignore everything:**
+   Only ignore files that are generated automatically, such as compiled source code, dependancy folders, and temporary files. Don't ignore files that are part of the project, such as source code, documentation, and configuration files.
+
+2. **Use glob patterns:**
+   You can use glob patterns to ignore files with a certain extension or in a certain directory. For example, to ignore all `.log` files, you can use the pattern `*.log`. To ignore all files in a directory named `logs`, you can use the pattern `logs/`.
+
+3. **Ignore files locally if needed:**
+   If you want to ignore files only in your local repository, you can create a `.git/info/exclude` file. This file works the same way as a `.gitignore` file, but it's not committed to the repository. This is useful if you want to ignore files that are specific to your local environment, such as editor configuration files.
+
+4. **Check what you're ignoring:**
+   Before you commit your `.gitignore` file, make sure that you're not ignoring any important files. You can do this by running the `git status --ignored` command. If you see any files that you want to track, you can remove them from the `.gitignore` file.
+
+5. **Use templates:**
+   There are many `.gitignore` templates available online for different types of projects. You can use these templates as a starting point for your own `.gitignore` file. You can find a list of templates on the [GitHub gitignore repository](https://github.com/toptal/gitignore)
+
+   
 Example of a .gitignore file for a Python project:
 
 ```bash
