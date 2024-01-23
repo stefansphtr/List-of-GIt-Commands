@@ -341,3 +341,53 @@ git config --global --get-regexp alias
 ```
 This command will list all the aliases that are set in your global Git configuration file.
 Each alias will be displayed in the format `alias.<alias-name> <command>`, where `<alias-name>` is the name of the alias and `<command>` is the Git command that the alias stands for.
+
+## .gitignore
+
+ The `.gitignore` is a plain text file that tells Git to intentionally ignore changes in certain files. A `.gitignore` file is placed in the root directory of a Git repository and contains a list of files and directories that Git should ignore.
+
+ Common types of files to ignore include:
+ 
+ 1. Compiled source code:
+    Files that are the output of a build process, such as:
+    - `.o`
+    - `.pyc`
+    - `.class`
+    - `.dll`
+    - `.exe`
+    - `.so`
+
+
+ 2. Packages:
+    Dependancy folders, such as:
+    - `.node_modules`
+    - `.bower_components`
+    - `.pnp`
+    - `.vendor`
+
+ 3. Logs and databases
+    Log, data, and other files generated at runtime, such as:
+
+    - `.log`
+    - `.sql`
+    - `.sqlite`
+
+ 4. Operating system generated files
+    Temporary files created by the operating system, such as:
+
+    - `.DS_Store`
+    - `.Thumbs.db`
+    - `.Spotlight-V100`
+    - `.Trashes`
+
+ 5. User-generated settings
+    Files that are personal user settings, like:
+
+    - `.vscode`
+    - `.idea`
+
+ 6. Secrets
+    Files containing sensitive data, like:
+
+    - `.env`
+    - `.config.json`
