@@ -169,6 +169,28 @@ If you're using a version of Git that's older than 2.23.0, `git switch` won't be
 
    The remote branches are listed under their respective remotes (origin and upstream in this case).
 
+- To list only remote branches, use the command:
+
+  ```bash
+  git branch -r
+  ```
+
+  This `git branch -r` command lists only the remote branches in the repository. **These** are **branches** that **exist in the remote repositories** and have been fetched into your local repository, but they are not local branches that you can directly check out and work on. **To work on these branches**, you would **first** need to **check them out**, which **creates a local branch that tracks the remote one**. This command is useful when you want to see what branches exist on the remote repositories, without the clutter of your local branches.
+
+  Example:
+
+  ```bash
+  $ git branch -r
+    origin/HEAD -> origin/main
+    origin/main
+    upstream/agraves.test-branch
+    upstream/dotnet
+    upstream/main
+    upstream/strong-induction-edits
+  ```
+
+  The remote branches are listed under their respective remotes (origin and upstream in this case).
+
 To create a branch and switch to it immediately, use the command:
 
 ```bash
