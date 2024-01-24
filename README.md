@@ -191,11 +191,26 @@ If you're using a version of Git that's older than 2.23.0, `git switch` won't be
 
   The remote branches are listed under their respective remotes (origin and upstream in this case).
 
-To create a branch and switch to it immediately, use the command:
+- To create a branch and switch to it immediately, use the command:
 
-```bash
-git checkout -b branch_name
-```
+  ```bash
+  git checkout -b branch_name
+  ```
+
+   This `git checkout -b` command creates a new branch and switches to it immediately. It's a shortcut for the following two commands:
+   
+   ```bash
+   git branch branch_name
+   git checkout branch_name
+   ```
+
+   Example:
+
+   ```bash
+   $ git checkout -b new-branch
+   Switched to a new branch 'new-branch'
+   ```
+
 
 ## Branch -vv
 
