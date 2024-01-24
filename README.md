@@ -211,7 +211,42 @@ If you're using a version of Git that's older than 2.23.0, `git switch` won't be
    Switched to a new branch 'new-branch'
    ```
 
+- To fetch all branches from a remote repository and create corresponding local tracking branches , you can use the following commands:
 
+   ```bash
+   # Fetch all branches from the upstream repository
+   git fetch upstream
+
+   # Check out each branch you want to have locally, creating a local tracking branch
+   git checkout -b branch-name upstream/branch-name
+   ```
+   Replace `branch-name` with the name of each branch you want to create locally. This will create a new local branch that tracks the corresponding branch from the `upstream` repository.
+
+   If you want to fetch all branches and automatically create tracking branches for all of them, you can use a loop in bash:
+
+   ```bash
+   # Fetch all branches from the upstream repository
+   git fetch upstream
+   # Loop over each branch from the upstream repository
+   for branch in $(git branch -r | grep 'upstream/' | sed 's/upstream\///'); do
+       # Check out each branch, creating a local tracking branch
+       git checkout -b $branch upstream/$branch;
+   done
+   ```
+   Example:
+
+   ```bash
+   $ for branch in $(git branch -r | grep 'upstream/' | sed 's/upstream\///'); do
+   > git checkout -b $branch upstream/$branch;
+   > done
+   Switched to a new branch 'agraves.test-branch'
+   Switched to a new branch 'dotnet'
+   Switched to a new branch 'main'
+   Switched to a new branch 'strong-induction-edits'
+   ``` 
+
+   This will create a local branch for each branch in the `upstream` repository, each tracking its corresponding `upstream` branch.
+   
 ## Branch -vv
 
 If you want to check tracking branches for pull and push requests. This command will list all local branches along with their corresponding remote branches if they have one.
