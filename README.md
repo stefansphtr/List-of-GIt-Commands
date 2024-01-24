@@ -146,6 +146,29 @@ If you're using a version of Git that's older than 2.23.0, `git switch` won't be
 
   The `*` before a branch name indicates that it's the currently checked out branch.
 
+- To list all branches, including remote branches, use the command:
+
+  ```bash
+  git branch -a
+  ```
+
+   This `git branch -a` command lists all branches in the local repository, both local and remote. The branches are listed in a hierarchical structure, showing the remote repository (origin/upstream) followed by the branch name.
+
+   Example:
+
+   ```bash
+   $ git branch -a
+   * main
+    remotes/origin/HEAD -> origin/main
+    remotes/origin/main
+    remotes/upstream/agraves.test-branch
+    remotes/upstream/dotnet
+    remotes/upstream/main
+    remotes/upstream/strong-induction-edits
+   ```
+
+   The remote branches are listed under their respective remotes (origin and upstream in this case).
+
 To create a branch and switch to it immediately, use the command:
 
 ```bash
