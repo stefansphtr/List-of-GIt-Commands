@@ -350,22 +350,6 @@ To pull all data from git, use the command:
 git fetch –all
 ```
 
-## Pull Request
-
-To create a pull request, you typically don't use a Git command. Instead, you use the web interface of your Git hosting service (like GitHub, GitLab, or Bitbucket). However, you can use the `git request-pull` command to generate a summary of pending changes:
-
-```bash
-git request-pull <start> <URL> [<end>]
-```
-
-## Pull
-
-To fetch from and integrate with another repository or a local branch, use the command:
-
-```bash
-git pull [<options>] [<repository> [<refspec>…​]]
-```
-
 ## Merge
 
 To merge another branch into your current branch, use the command:
