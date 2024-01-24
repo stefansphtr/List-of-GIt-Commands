@@ -63,7 +63,7 @@ git status
 To commit changes, use the command:
 
 ```bash
-git commit
+git commit -m "your commit message here"
 ```
 
 To commit changes and skip the staging area, use the command:
