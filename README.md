@@ -69,7 +69,7 @@ git commit -m "your commit message here"
 To commit changes and skip the staging area, use the command:
 
 ```bash
-git commit -a -m"your commit message here"
+git commit -a -m "your commit message here"
 ```
 
 ## Log
