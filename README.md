@@ -129,11 +129,22 @@ If you're using a version of Git that's older than 2.23.0, `git switch` won't be
 
 ## Branch
 
-To list branches, use the command:
+- To list branches, use the command:
 
-```bash
-git branch
-```
+  ```bash
+  git branch
+  ```
+
+  The `git branch` command without any options lists only the local branches in the repository. 
+
+  Example:
+
+  ```bash
+  $ git branch
+  * main
+  ```
+
+  The `*` before a branch name indicates that it's the currently checked out branch.
 
 To create a branch and switch to it immediately, use the command:
 
