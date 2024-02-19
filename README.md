@@ -689,3 +689,26 @@ Here are a few use cases of .gitattributes:
 
 Remember to commit the `.gitattributes` file into your repository so that these settings are shared with all collaborators.
 
+## Track changes in Jupyter notebooks
+To make Git only track changes in the code and markdown cells of your Jupyter notebooks, you can use a tool called `nbdime`. `nbdime` provides "content-aware" diffing and merging of Jupyter notebooks. It understands the structure of notebook documents and can therefore give a more meaningful diff than what you get with plain text diffing tools.
+
+Here are the steps to set up `nbdime`:
+
+1. Install `nbdime` using pip:
+
+```bash
+pip install nbdime
+```
+
+2. Configure `nbdime` with Git:
+
+```bash
+nbdime config-git --enable --global
+```
+
+This will set `nbdime` as the default tool for diffing and merging Jupyter notebooks in Git.
+
+Now, when you make changes to a notebook, Git will use `nbdime` to calculate the diff, and it will only show changes in the code and markdown cells, not in the output or execution count.
+
+Please note that this will affect all repositories on your system. If you want to enable `nbdime` for a single repository, you can remove the `--global` flag from the command.
+
