@@ -3,17 +3,17 @@
 </div>
 
 # Git Commands Cheat Sheet
-
+---
 This is a list of common and useful Git commands that you can use in your daily development work.
 
 > Note: I list an extra customizing git like alias, .gitignore, and .gitattributes
 
 ## Setting Upstream in Git
-
+---
 This guide explains how to set up an upstream branch in Git. Setting an upstream branch means to link a local branch to a remote branch. This is useful for tracking the relationship between the two, and Git can provide helpful information about the status of the branches.
 
 ### Steps
-
+---
 1. **Create a new branch**
 
    Create a new branch in your local repository.
@@ -43,7 +43,7 @@ This guide explains how to set up an upstream branch in Git. Setting an upstream
     Replace `remote-branch` with the name of the branch on the remote repository that you want to track.
 
 ## Configuration
-
+---
 To check your Git configuration, which includes user name and email, use the command:
 
 ```bash
@@ -51,7 +51,7 @@ git config -l
 ```
 
 ## Status
-
+---
 To check the status of the current repository, including staged, unstaged, and untracked files, use the command:
 
 ```bash
@@ -59,7 +59,7 @@ git status
 ```
 
 ## Commit
-
+---
 To commit changes, use the command:
 
 ```bash
@@ -73,7 +73,7 @@ git commit -a -m "your commit message here"
 ```
 
 ## Log
-
+---
 To see your commit history, use the command:
 
 ```bash
@@ -87,7 +87,7 @@ git log -p
 ```
 
 ## Diff
-
+---
 To see changes made before committing them, use the command:
 
 ```bash
@@ -95,7 +95,7 @@ git diff
 ```
 
 ## Remove
-
+---
 To remove tracked files from the current working tree, use the command:
 
 ```bash
@@ -103,7 +103,7 @@ git rm filename
 ```
 
 ## Checkout
-
+---
 This is a versatile command that can be used for both switching to a different branch and for checking out files from a different branch. This can sometimes lead to confusion, especially for beginners, because the command's behavior changes based on the context.
 
 
@@ -114,7 +114,7 @@ git checkout branch_name
 ```
 
 ## Switch
-
+---
 This is a newer command, introduced in Git 2.23.0, that is specifically designed for switching between branches. It separates the "switching branches" and "checking out files" functionalities of `git checkout` into two distinct commands (`git switch` and `git restore` respectively). This makes it more intuitive and less error-prone to use, especially for beginners.
 
 ```bash
@@ -128,7 +128,7 @@ If you're using a version of Git that's older than 2.23.0, `git switch` won't be
 `git checkout` and `git switch` are both Git commands used to switch between different branches in a Git repository. However, they have some differences in their usage and functionality.
 
 ## Branch
-
+---
 - To list branches, use the command:
 
   ```bash
@@ -248,7 +248,7 @@ If you're using a version of Git that's older than 2.23.0, `git switch` won't be
    This will create a local branch for each branch in the `upstream` repository, each tracking its corresponding `upstream` branch.
    
 ## Branch -vv
-
+---
 If you want to check tracking branches for pull and push requests. This command will list all local branches along with their corresponding remote branches if they have one.
 
 Here is the command:
@@ -267,7 +267,7 @@ feature 687704c [origin/feature: ahead 1, behind 1] Add new feature
 In this example, the `main` branch is tracking `origin/main`, and the `feature` branch is tracking `origin/feature`. The `ahead 1` and `behind 1` indicate that the `feature` branch is one commit ahead of and one commit behind its remote tracking branch.
 
 ## Remote
-
+---
 To add a remote repository, use the command:
 
 ```bash
@@ -281,7 +281,7 @@ git push
 ```
 
 ## Remote set-url
-
+---
 If you've already added a remote repository with the wrong URL, you can change it using the `git remote set-url` command. Here's how:
 
 1. First, check the current remote repository for your project. You can do this with the `git remote -v` command. This will list all remote repositories and their URLs.
@@ -306,11 +306,11 @@ Now, the `origin` should point to the correct remote repository URL.
 
 
 ## Renaming a Git Branch
-
+---
 This guide explains how to rename a local Git branch and update the remote repository to reflect the change.
 
 ### Steps
-
+---
 1. **Rename the local branch**
 
    If you are currently on the branch you want to rename:
@@ -343,7 +343,7 @@ This guide explains how to rename a local Git branch and update the remote repos
 
 
 ## Pull
-
+---
 To pull all data from git, use the command:
 
 ```bash
@@ -366,7 +366,7 @@ Use Case:
 Suppose you're working on a project with a team, and you're all pushing changes to the same remote repository. You've been working on the 'feature' branch locally, and you want to get the latest changes that your teammates have pushed to the 'feature' branch on the remote repository. You would navigate to your local 'feature' branch and then run `git pull`. This would fetch the latest version of the 'feature' branch from the remote repository and merge it into your local 'feature' branch. If there are any conflicts between your local version and the remote version, you would need to resolve them before the merge can be complete.
 
 ## Merge
-
+---
 To merge another branch into your current branch, use the command:
 
 ```bash
@@ -374,7 +374,7 @@ git merge branch_name
 ```
 
 ## Rebase
-
+---
 To apply changes from another branch to your current branch, use the command:
 
 ```bash
@@ -382,7 +382,7 @@ git rebase branch_name
 ```
 
 ## Pull + rebase
-
+---
 To fetch a branch from remote + rebasing it
 
 ```sh
@@ -390,7 +390,7 @@ git pull --rebase
 ```
 
 ## Alias
-
+---
 In Git, an **alias is a shorter name or abbreviation for a command or a set of commands**. It's a way to create custom commands or shorten existing ones to make them quicker and easier to type.
 Aliases are defined in the Git configuration file, which can be at the system, user, or repository level. The `--global` **option sets the alias for all repositories for the current user**.
 
@@ -455,7 +455,7 @@ Each alias will be displayed in the format `alias.<alias-name> <command>`, where
 Git uses a text editor for several actions such as writing commit messages, resolving merge conflicts, etc. By default, Git uses the system's default editor, which is usually Vim or Nano.
 
 ### Checking the Current Default Editor
-
+---
 To check which editor Git is currently using, you can use the following command:
 
 ```bash
@@ -465,7 +465,7 @@ git config --global core.editor
 This command will return the name of the editor that Git is currently configured to use.
 
 ### Changing the Default Editor
-
+---
 To change the default editor, you can use the `git config` command followed by the `--global core.editor` option and the name of the editor you want to use. 
 
 For example, if you want to change the default editor to VS Code, you can use the following command:
@@ -483,7 +483,7 @@ Replace `"code --wait"` with the command line alias of your preferred editor. Fo
 Remember to replace the `"code --wait"` part with the command that opens your preferred text editor.
 
 ## .gitignore
-
+---
  The `.gitignore` is a plain text file that tells Git to intentionally ignore changes in certain files. A `.gitignore` file is placed in the root directory of a Git repository and contains a list of files and directories that Git should ignore.
 
  Common types of files to ignore include:
@@ -684,7 +684,7 @@ dmypy.json
 ```
 
 ## .gitattributes
-
+---
 The `.gitattributes` file is a plain text file that controls how Git treats files. Each line in the `.gitattributes` file is a pattern followed by an attribute specification. It's placed in the root directory of a Git repository and contains a list of file patterns followed by the attributes that should be applied to them.
 
 Here are a few use cases of .gitattributes:
@@ -723,7 +723,7 @@ Here are a few use cases of .gitattributes:
 Remember to commit the `.gitattributes` file into your repository so that these settings are shared with all collaborators.
 
 ## Track changes in Jupyter notebooks
-To make Git only track changes in the code and markdown cells of your Jupyter notebooks, you can use a tool called `nbdime`. `nbdime` provides "content-aware" diffing and merging of Jupyter notebooks. It understands the structure of notebook documents and can therefore give a more meaningful diff than what you get with plain text diffing tools.
+To--- make Git only track changes in the code and markdown cells of your Jupyter notebooks, you can use a tool called `nbdime`. `nbdime` provides "content-aware" diffing and merging of Jupyter notebooks. It understands the structure of notebook documents and can therefore give a more meaningful diff than what you get with plain text diffing tools.
 
 Here are the steps to set up `nbdime`:
 
