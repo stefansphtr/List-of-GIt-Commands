@@ -2,17 +2,47 @@
 <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385dfa7ed2.gif" width="100">
 </div>
 
-# Git Commands Cheat Sheet
+# 📝 Git Commands Cheat Sheet
 ---
 This is a list of common and useful Git commands that you can use in your daily development work.
 
 > Note: I list an extra customizing git like alias, .gitignore, and .gitattributes
 
-## Setting Upstream in Git
+## 📚 Table of Contents
+---
+- [📝 Git Commands Cheat Sheet](#-git-commands-cheat-sheet)
+  - [📚 Table of Contents](#-table-of-contents)
+  - [🔗 Setting Upstream in Git](#-setting-upstream-in-git)
+    - [👣 Steps](#-steps)
+  - [Status](#status)
+  - [Commit](#commit)
+  - [Log](#log)
+  - [Diff](#diff)
+  - [Remove](#remove)
+  - [Checkout](#checkout)
+  - [Switch](#switch)
+  - [Branch](#branch)
+  - [Branch -vv](#branch--vv)
+  - [Remote](#remote)
+  - [Remote set-url](#remote-set-url)
+  - [Renaming a Git Branch](#renaming-a-git-branch)
+    - [Steps](#steps)
+  - [Merge](#merge)
+  - [Rebase](#rebase)
+  - [Pull + rebase](#pull--rebase)
+  - [Alias](#alias)
+  - [Changing the Default Editor Used by Git](#changing-the-default-editor-used-by-git)
+    - [Checking the Current Default Editor](#checking-the-current-default-editor)
+    - [Changing the Default Editor](#changing-the-default-editor)
+  - [.gitignore](#gitignore)
+  - [.gitattributes](#gitattributes)
+  - [Track changes in Jupyter notebooks](#track-changes-in-jupyter-notebooks)
+
+## 🔗 Setting Upstream in Git
 ---
 This guide explains how to set up an upstream branch in Git. Setting an upstream branch means to link a local branch to a remote branch. This is useful for tracking the relationship between the two, and Git can provide helpful information about the status of the branches.
 
-### Steps
+### 👣 Steps
 ---
 1. **Create a new branch**
 
