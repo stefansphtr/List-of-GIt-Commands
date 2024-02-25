@@ -37,6 +37,7 @@ This is a list of common and useful Git commands that you can use in your daily 
   - [❌ .gitignore](#-gitignore)
   - [📝 .gitattributes](#-gitattributes)
   - [🔍 Track changes in Jupyter notebooks](#-track-changes-in-jupyter-notebooks)
+  - [🗄️ Using Git Large File Storage (LFS)](#️-using-git-large-file-storage-lfs)
 
 ## 🔗 Setting Upstream in Git
 ---
@@ -775,3 +776,39 @@ Now, when you make changes to a notebook, Git will use `nbdime` to calculate the
 
 Please note that this will affect all repositories on your system. If you want to enable `nbdime` for a single repository, you can remove the `--global` flag from the command.
 
+## 🗄️ Using Git Large File Storage (LFS)
+---
+Git LFS is a Git extension that improves the handling of large files by replacing them with text pointers inside Git while storing the file contents on a remote server. Here's how to use it:
+
+1. Install Git LFS:
+
+```bash
+git lfs install
+```
+
+2. Track files:
+
+To track a new large file or file type, use the `git lfs track` command followed by the file or file type. For example, to track all `.iso` files, you would use:
+
+```bash
+git lfs track "*.iso"
+```
+
+3. Commit and push:
+
+After tracking your large files, commit them as you would with any other change:
+
+```bash
+git add file.iso
+git commit -m "Add large file"
+```
+
+Then, push your changes to the remote repository:
+
+```bash
+git push origin main
+```
+
+Please note that the large files themselves will not be stored in the Git repository, but in a separate location.
+```
+Remember to replace `main` with the name of your branch if it's different.
