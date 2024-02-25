@@ -363,7 +363,7 @@ Here's a detailed breakdown:
 
 Use Case:
 
-Suppose you're working on a project with a team, and you're all pushing changes to the same remote repository. You've been working on the 'feature' branch locally, and you want to get the latest changes that your teammates have pushed to the 'feature' branch on the remote repository. You would navigate to your local 'feature' branch and then run `git pull`. This would fetch the latest version of the 'feature' branch from the remote repository and merge it into your local 'feature' branch. If there are any conflicts between your local version and the remote version, you would need to resolve them before the merge can complete.
+Suppose you're working on a project with a team, and you're all pushing changes to the same remote repository. You've been working on the 'feature' branch locally, and you want to get the latest changes that your teammates have pushed to the 'feature' branch on the remote repository. You would navigate to your local 'feature' branch and then run `git pull`. This would fetch the latest version of the 'feature' branch from the remote repository and merge it into your local 'feature' branch. If there are any conflicts between your local version and the remote version, you would need to resolve them before the merge can be complete.
 
 ## Merge
 
@@ -375,7 +375,7 @@ git merge branch_name
 
 ## Rebase
 
-To apply changes from another branch onto your current branch, use the command:
+To apply changes from another branch to your current branch, use the command:
 
 ```bash
 git rebase branch_name
@@ -391,8 +391,8 @@ git pull --rebase
 
 ## Alias
 
-In Git, an alias is a shorter name or abbreviation for a command or a set of commands. It's a way to create custom commands or shorten existing ones to make them quicker and easier to type.
-Aliases are defined in the Git configuration file, which can be at the system, user, or repository level. The --global option sets the alias for all repositories for the current user.
+In Git, an **alias is a shorter name or abbreviation for a command or a set of commands**. It's a way to create custom commands or shorten existing ones to make them quicker and easier to type.
+Aliases are defined in the Git configuration file, which can be at the system, user, or repository level. The `--global` **option sets the alias for all repositories for the current user**.
 
 - Shorten the status command
 
@@ -435,7 +435,7 @@ git config --global alias.ad add
 ```bash
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
-- Show the status in short format
+- Show the status in a short format
 
 ```bash
 git config --global alias.s "status -s"
