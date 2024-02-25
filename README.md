@@ -449,6 +449,39 @@ git config --global --get-regexp alias
 This command will list all the aliases that are set in your global Git configuration file.
 Each alias will be displayed in the format `alias.<alias-name> <command>`, where `<alias-name>` is the name of the alias and `<command>` is the Git command that the alias stands for.
 
+## Changing the Default Editor Used by Git
+---
+
+Git uses a text editor for several actions such as writing commit messages, resolving merge conflicts, etc. By default, Git uses the system's default editor, which is usually Vim or Nano.
+
+### Checking the Current Default Editor
+
+To check which editor Git is currently using, you can use the following command:
+
+```bash
+git config --global core.editor
+```
+
+This command will return the name of the editor that Git is currently configured to use.
+
+### Changing the Default Editor
+
+To change the default editor, you can use the `git config` command followed by the `--global core.editor` option and the name of the editor you want to use. 
+
+For example, if you want to change the default editor to VS Code, you can use the following command:
+
+```bash
+git config --global core.editor "code --wait"
+```
+
+This command sets the default editor to VS Code (`code`). The `--wait` option is used to keep VS Code open until you close it, which is necessary for commands like `git commit` that wait for the editor to close before continuing.
+
+Replace `"code --wait"` with the command line alias of your preferred editor. For example, for Sublime Text it might be `"subl -n -w"`, for nano it might be `"nano"`, etc.
+
+---
+
+Remember to replace the `"code --wait"` part with the command that opens your preferred text editor.
+
 ## .gitignore
 
  The `.gitignore` is a plain text file that tells Git to intentionally ignore changes in certain files. A `.gitignore` file is placed in the root directory of a Git repository and contains a list of files and directories that Git should ignore.
